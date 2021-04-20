@@ -1,0 +1,17 @@
+# Site info
+title: Steve for Jekyll
+tagline: Charming and fun blog theme.
+description: Steve is a charming and fun blog theme for Jekyll websites.
+
+email: steve-support@esporo.net
+
+lang: en-US
+
+# Build settings
+markdown: kramdown
+permalink: "/:year/:month/:day/:title/"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
