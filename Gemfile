@@ -3,7 +3,16 @@
 source "https://rubygems.org"
 gemspec
 
-gem 'wdm', '~> 0.1.1', :install_if => Gem.win_platform?
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.15.1"
+  gem "jekyll-seo-tag", "~> 2.7"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-paginate", "~> 1.1"
+  gem "jekyll-archives", "~> 2.2"
+end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+install_if -> { Gem.win_platform? } do
+  gem "wdm", "~> 0.1.1"
+  gem "tzinfo", "~> 2.0.4"
+  gem "tzinfo-data"
+end
