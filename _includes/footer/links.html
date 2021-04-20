@@ -1,0 +1,11 @@
+{% if site.data.links %}
+  <ul class="external-links">
+    {% for link in site.data.links %}
+      <li class="link">
+        <a href="{{ link.url }}" {% if link.external %} rel="external" {% endif %}>
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
