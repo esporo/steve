@@ -1,0 +1,12 @@
+{% if site.data.menu %}
+  <nav class="site-menu">
+    {% for item in site.data.menu %}
+      <a class="menu-item" href="{{ item.url }}"
+        {% if item.external %} rel="external" {% endif %}
+        {% if item.color %} style="background-color: {{ item.color }}" {% endif %}
+      >
+        {{ item.title }}
+      </a>
+    {% endfor %}
+  </nav>
+{% endif %}
