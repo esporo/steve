@@ -9,7 +9,7 @@
     <div class="content-meta">
       <a class="content-date" href="{{ post.url }}" rel="bookmark">
         <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | site.steve.date_formats.post }}
+          {{ post.date | date: site.steve.date_formats.post }}
         </time>
       </a>
 
