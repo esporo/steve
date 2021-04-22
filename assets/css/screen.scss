@@ -1,4 +1,19 @@
 ---
 ---
 
+:root {
+  --color-bg: #fff;
+  --color-body: #e4f0f6;
+  --color-text: #000112;
+  --color-link: #4e9dd8;
+  --color-link-hover: #2361a7;
+  --color-details: #939496;
+  --color-details-lighter: #f0f1f4;
+  --color-details-darker: #6d6e70;
+
+  --font: "Fira Sans", "Trebuchet MS", "Liberation Sans", sans-serif;
+  --container: 960px;
+  --gap: 2rem;
+}
+
 @import "steve";
