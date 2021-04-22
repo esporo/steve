@@ -1,15 +1,17 @@
 {% capture site_branding %}
 <a href="{{ site.url }}">
   {% if site.logo %}
-  <img class="logo" src="{{ site.logo }}" alt="{{ site.title }}" />
-  {% else %} {{ site.title }} {% endif %}
+    <img class="logo" src="{{ site.logo }}" alt="{{ site.title }}" />
+  {% else %}
+    {{ site.title }}
+  {% endif %}
 </a>
 {% endcapture %}
 
 <header class="masthead">
   {% if page.title %}
-  <p class="site-title">{{ site_branding }}</p>
+    <p class="site-title">{{ site_branding }}</p>
   {% else %}
-  <h1 class="site-title">{{ site_branding }}</h1>
+    <h1 class="site-title">{{ site_branding }}</h1>
   {% endif %} {% include header/menu.html %}
 </header>

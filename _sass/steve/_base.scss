@@ -1,3 +1,31 @@
+/*
+  Resets
+*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Basic styling
+*/
+
 html {
   font-size: 16px;
   box-sizing: border-box;
@@ -16,4 +44,21 @@ html {
 body {
   background-color: var(--color-body);
   font-family: var(--font);
+}
+
+/*
+  Text Elements
+*/
+
+// Links
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 250ms ease;
+
+  &:hover,
+  &:focus {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+  }
 }
