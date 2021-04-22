@@ -11,7 +11,11 @@ lang: en-US
 markdown: kramdown
 permalink: "/:year/:month/:day/:title/"
 
+paginate: 6
+paginate_path: "/page/:num/"
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
