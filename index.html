@@ -2,4 +2,6 @@
 layout: blog
 ---
 
-<p>Content placeholder.</p>
+{% for post in paginator.posts %}
+  {% include blog/post.html %}
+{% endfor %}

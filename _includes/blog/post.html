@@ -1,0 +1,61 @@
+<article class="content post">
+  <header class="content-header">
+    {% if post.title != "" %}
+      <h2 class="content-title">
+        <a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+      </h2>
+    {% endif %}
+
+    <div class="content-meta">
+      <a class="content-date" href="{{ post.url }}" rel="bookmark">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
+          {{ post.date | site.steve.date_formats.post }}
+        </time>
+      </a>
+
+      {% if post.author %}
+        {% assign author == site.data.authors[post.author] %}
+
+        {% if author.url %}
+          <a class="content-author" href="{{ author.url }}" rel="author">
+            {{ author.name }}
+          </a>
+        {% else %}
+          <a class="content-author" href="{{ site.twitter.username | append: 'https://twitter.com/' }}" rel="author">
+            {{ post.author }}
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+  </header>
+
+  {% if post.image %}
+    <figure class="content-cover">
+      <img src="{{ post.image.url | default: post.image }}" alt="{{ post.image.alt | default: '' }}" />
+    </figure>
+  {% endif %}
+
+  {% unless include.full_post %}
+    <div class="content-body">
+      {{ post.content }}
+    </div>
+  {% endunless %}
+
+  {% if post.tags %}
+      <footer class="content-footer">
+        <p>Tags:</p>
+
+        <ul class="content-tags">
+          {% for tag in post.tags %}
+            <li>
+              {%- assign tag_slug = tag | slugify -%}
+
+              <a href="{{ site.jekyll-archives.permalinks.tag | replace: ':name', tag_slug }}" rel="tag">
+                {{ tag }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </footer>
+  {% endif %}
+</article>
