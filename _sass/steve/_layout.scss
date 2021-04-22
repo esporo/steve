@@ -97,7 +97,7 @@ body {
 
 .layout-blog,
 .layout-post {
-  .content {
+  .container {
     display: grid;
     gap: var(--gap);
     grid-template-columns: 1fr 1fr 1fr;

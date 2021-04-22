@@ -7,6 +7,11 @@ email: steve-support@esporo.net
 
 lang: en-US
 
+# Theme settings
+steve:
+  date_formats:
+    post: "%m/%d/%Y"
+
 # Build settings
 markdown: kramdown
 permalink: "/:year/:month/:day/:title/"
@@ -19,3 +24,13 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
+  - jekyll-archives
+
+# Plugin: jekyll-archives
+jekyll-archives:
+  enabled:
+    - tags
+  layout: archive
+  slug_mode: default
+  permalinks:
+    tag: "/tag/:name/"
