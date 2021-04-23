@@ -5,13 +5,20 @@
   --color-bg: #fff;
   --color-body: #e4f0f6;
   --color-text: #000112;
+
   --color-link: #4e9dd8;
   --color-link-hover: #2361a7;
+
   --color-details: #939496;
   --color-details-lighter: #f0f1f4;
   --color-details-darker: #6d6e70;
 
-  --font: "Trebuchet MS", "Fira Sans", "Liberation Sans", sans-serif;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-headings: var(--font);
+  --font-code: SFMono-Regular, "Cascadia Code", Menlo, Consolas, monospace;
+
   --container: 1200px;
   --gap: 3rem;
 

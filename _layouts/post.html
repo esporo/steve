@@ -1,5 +1,64 @@
 ---
-layout: default
+layout: blog
 ---
 
-{{ content }}
+<article class="content post">
+  <header class="content-header">
+    {% if page.title != "" %}
+      <h1 class="content-title">
+        {{ page.title }}
+      </h1>
+    {% endif %}
+
+    <div class="content-meta">
+      <a class="content-date" href="{{ page.url }}" rel="bookmark">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: site.steve.date_formats.post }}
+        </time>
+      </a>
+
+      {% if page.author %}
+        {% assign author = site.data.authors[page.author] %}
+
+        {% if author.url %}
+          <a class="content-author" href="{{ author.url }}" rel="author">
+            {{ author.name }}
+          </a>
+        {% else %}
+          <a class="content-author" href="{{ site.twitter.username | append: 'https://twitter.com/' }}" rel="author">
+            {{ page.author }}
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+  </header>
+
+  {% if page.image %}
+  <fig[ure class="content-cover">
+    <img src="{{ page.image.url | default: page.image }}" alt="{{ page.image.alt | default: '' }}" />
+  </fi]gure>
+  {% endif %}
+
+  <div class="content-body">
+    {{ page.content }}
+  </div>
+
+  {% if page.tags.size > 0 %}
+    <footer class="content-footer">
+      <p>Tags:</p>
+
+      <ul class="content-tags">
+        {% for tag in page.tags %}
+        <li>
+          {%- assign tag_slug = tag | slugify -%}
+
+          <a href="{{ site.jekyll-archives.permalinks.tag | replace: ':name', tag_slug }}" rel="tag">
+            {{ tag }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </footer>
+  {% endif %}
+</article>
+

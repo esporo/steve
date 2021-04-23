@@ -14,7 +14,7 @@
       </a>
 
       {% if post.author %}
-        {% assign author == site.data.authors[post.author] %}
+        {% assign author = site.data.authors[post.author] %}
 
         {% if author.url %}
           <a class="content-author" href="{{ author.url }}" rel="author">
