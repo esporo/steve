@@ -7,6 +7,9 @@ email: steve-support@esporo.net
 
 lang: en-US
 
+url: "https://esporo.github.io"
+baseurl: "/"
+
 # Theme settings
 steve:
   date_formats:

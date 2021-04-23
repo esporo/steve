@@ -3,21 +3,9 @@
 */
 
 body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-hr,
-dl,
-dd,
-ol,
-ul,
-figure {
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
@@ -44,11 +32,21 @@ html {
 body {
   background-color: var(--color-body);
   font-family: var(--font);
+  line-height: 1.5;
 }
 
 /*
   Text Elements
 */
+
+.content-body {
+  p, pre, blockquote,
+  dl, ul, ol, figure,
+  iframe, table, hr {
+    margin-top: calc(var(--gap) / 2);
+    margin-bottom: calc(var(--gap) / 2);
+  }
+}
 
 // Links
 a {
@@ -61,4 +59,40 @@ a {
     color: var(--color-link-hover);
     text-decoration: underline;
   }
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5, h6 {
+  font-size: 0.875rem;
+}
+
+// Code
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+// Media
+img {
+  max-width: 100%;
 }

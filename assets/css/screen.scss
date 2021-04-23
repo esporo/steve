@@ -11,9 +11,13 @@
   --color-details-lighter: #f0f1f4;
   --color-details-darker: #6d6e70;
 
-  --font: "Fira Sans", "Trebuchet MS", "Liberation Sans", sans-serif;
-  --container: 960px;
-  --gap: 2rem;
+  --font: "Trebuchet MS", "Fira Sans", "Liberation Sans", sans-serif;
+  --container: 1200px;
+  --gap: 3rem;
+
+  @media screen and (max-width: 800px) {
+    --gap: 2rem;
+  }
 }
 
 @import "steve";

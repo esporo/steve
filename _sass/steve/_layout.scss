@@ -4,8 +4,8 @@ body {
   min-height: 100vh;
   max-width: var(--container);
   margin: var(--gap) auto;
-  padding-left: var(--gap);
-  padding-right: var(--gap);
+  padding-left: calc(var(--gap) / 2);
+  padding-right: calc(var(--gap) / 2);
 }
 
 /*
@@ -13,7 +13,7 @@ body {
 */
 
 .masthead {
-  margin-bottom: calc(var(--gap) * 2);
+  margin-bottom: var(--gap);
 
   .site-title {
     font-size: 2rem;
@@ -42,8 +42,8 @@ body {
     flex-flow: row nowrap;
     justify-content: flex-start;
     overflow-x: auto;
-    margin-left: calc(var(--gap) * -1);
-    margin-right: calc(var(--gap) * -1);
+    margin-left: calc(var(--gap) / -2);
+    margin-right: calc(var(--gap) / -2);
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 
@@ -60,19 +60,19 @@ body {
 
   &::before {
     margin-left: auto;
-    padding-left: var(--gap);
+    padding-left: calc(var(--gap) / 2);
   }
 
   &::after {
     margin-right: auto;
-    padding-right: var(--gap);
+    padding-right: calc(var(--gap) / 2);
   }
 }
 
 .menu-item {
   color: rgba(255, 255, 255, 0.7);
   background-color: var(--color-link);
-  border-radius: 1rem;
+  border-radius: 1.5rem;
   font-weight: bolder;
   padding: 0.5rem 1rem;
 
@@ -95,6 +95,13 @@ body {
   Content
 */
 
+.content {
+  background-color: var(--color-bg);
+  padding: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+// The Blog Layout
 .layout-blog,
 .layout-post {
   .container {
@@ -107,38 +114,38 @@ body {
       "content content .";
 
     @media screen and (max-width: 600px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 100%;
       grid-template-areas:
         "search"
         "content"
         "sidebar";
     }
+  }
+}
 
-    .blog-page {
-      grid-area: content;
-    }
+.blog-page {
+  grid-area: content;
+}
 
-    .widget {
-      background-color: var(--color-bg);
-      padding: var(--gap);
-    }
+.widget {
+  background-color: var(--color-bg);
+  padding: var(--gap);
+}
 
-    .-search {
-      grid-area: sidebar;
-      grid-row: 1;
+.-search {
+  grid-area: sidebar;
+  grid-row: 1;
 
-      @media screen and (max-width: 600px) {
-        grid-area: search;
-      }
-    }
+  @media screen and (max-width: 600px) {
+    grid-area: search;
+  }
+}
 
-    .-sidebar {
-      grid-area: sidebar;
-      grid-row: 2;
+.-sidebar {
+  grid-area: sidebar;
+  grid-row: 2;
 
-      @media screen and (max-width: 600px) {
-        grid-row: auto;
-      }
-    }
+  @media screen and (max-width: 600px) {
+    grid-row: auto;
   }
 }
