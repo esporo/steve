@@ -8,12 +8,16 @@ layout: blog
 
 {% if paginator.total_pages > 1 %}
   <nav class="content-navigation">
-    <a class="nav-link prev-link" href="{{ paginator.previous_page_path }}" rel="prev">
-      &laquo; Next
-    </a>
+    {% if paginator.previous_page %}
+      <a class="nav-link prev-link" href="{{ paginator.previous_page_path }}" rel="prev">
+        &laquo; Next
+      </a>
+    {% endif %}
 
-    <a class="nav-link next-link" href="{{ paginator.next_page_path }}" rel="next">
-      Previous &raquo;
-    </a>
+    {% if paginator.next_page %}
+      <a class="nav-link next-link" href="{{ paginator.next_page_path }}" rel="next">
+        Previous &raquo;
+      </a>
+    {% endif %}
   </nav>
 {% endif %}

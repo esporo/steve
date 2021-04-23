@@ -128,6 +128,26 @@ body {
   }
 }
 
+.content-navigation {
+  display: flex;
+  align-items: center;
+
+  .nav-link {
+    background: var(--color-bg);
+    padding: calc(var(--gap) / 2) var(--gap);
+
+    &.prev-link {
+      justify-self: flex-start;
+      margin-right: auto;
+    }
+
+    &.next-link {
+      justify-self: flex-end;
+      margin-left: auto;
+    }
+  }
+}
+
 // The Blog Layout
 .layout-blog,
 .layout-post,
@@ -156,6 +176,7 @@ body {
   min-width: 0;
 }
 
+// Sidebar
 .widget {
   background-color: var(--color-bg);
   padding: var(--gap);
