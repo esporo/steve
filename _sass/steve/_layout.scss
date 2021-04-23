@@ -107,11 +107,11 @@ body {
   .container {
     display: grid;
     gap: var(--gap);
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-areas:
-      "content content search"
-      "content content sidebar"
-      "content content .";
+      "content sidebar"
+      "content sidebar"
+      "content .";
 
     @media screen and (max-width: 600px) {
       grid-template-columns: 100%;
@@ -125,6 +125,7 @@ body {
 
 .blog-page {
   grid-area: content;
+  min-width: 0;
 }
 
 .widget {

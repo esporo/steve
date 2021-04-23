@@ -3,9 +3,21 @@
 */
 
 body,
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -16,17 +28,10 @@ dl, dd, ol, ul, figure {
 
 html {
   font-size: 16px;
-  box-sizing: border-box;
 
   @media screen and (max-width: 800px) {
     font-size: 14px;
   }
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
 }
 
 body {
@@ -40,9 +45,16 @@ body {
 */
 
 .content-body {
-  p, pre, blockquote,
-  dl, ul, ol, figure,
-  iframe, table, hr {
+  p,
+  pre,
+  blockquote,
+  dl,
+  ul,
+  ol,
+  figure,
+  iframe,
+  table,
+  hr {
     margin-top: calc(var(--gap) / 2);
     margin-bottom: calc(var(--gap) / 2);
   }
@@ -62,7 +74,12 @@ a {
 }
 
 // Headings
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 1.2;
 }
 
@@ -82,7 +99,8 @@ h4 {
   font-size: 1rem;
 }
 
-h5, h6 {
+h5,
+h6 {
   font-size: 0.875rem;
 }
 
