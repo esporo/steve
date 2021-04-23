@@ -13,11 +13,10 @@
   --color-details-lighter: #f0f1f4;
   --color-details-darker: #6d6e70;
 
-  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font: "Trebuchet MS", "Fira Sans", sans-serif;
   --font-headings: var(--font);
-  --font-code: SFMono-Regular, "Cascadia Code", Menlo, Consolas, monospace;
+  --font-code: SFMono-Regular, "Cascadia Code", Menlo, Consolas,
+    "DejaVu Sans Mono", monospace;
 
   --container: 1180px;
   --gap: 2rem;

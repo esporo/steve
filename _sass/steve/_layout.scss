@@ -199,3 +199,47 @@ body {
     grid-row: auto;
   }
 }
+
+/*
+  Site Footer
+*/
+
+.colophon {
+  margin-top: calc(var(--gap) * 2);
+
+  h5 {
+    a {
+      color: currentColor;
+    }
+  }
+
+  .site-info {
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .external-links {
+    text-align: center;
+    list-style: none;
+    margin: calc(var(--gap) / 2) 0;
+
+    .link {
+      display: inline-block;
+
+      a {
+        color: var(--color-details-darker);
+        display: inline-block;
+      }
+
+      &:not(:last-child) {
+        &::after {
+          content: "/";
+          color: var(--color-details-lighter);
+          display: inline-block;
+          margin-left: calc(var(--gap) / 4);
+          margin-right: calc(var(--gap) / 4);
+        }
+      }
+    }
+  }
+}
