@@ -19,12 +19,8 @@
   --font-headings: var(--font);
   --font-code: SFMono-Regular, "Cascadia Code", Menlo, Consolas, monospace;
 
-  --container: 1200px;
-  --gap: 3rem;
-
-  @media screen and (max-width: 800px) {
-    --gap: 2rem;
-  }
+  --container: 1180px;
+  --gap: 2rem;
 }
 
 @import "steve";

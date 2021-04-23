@@ -13,11 +13,12 @@ body {
 */
 
 .masthead {
-  margin-bottom: var(--gap);
+  margin-bottom: calc(var(--gap) * 2);
 
   .site-title {
     font-size: 2rem;
     font-weight: bold;
+    line-height: 1.2;
     margin-bottom: var(--gap);
     text-align: center;
     color: var(--color-link);
@@ -97,8 +98,34 @@ body {
 
 .content {
   background-color: var(--color-bg);
-  padding: var(--gap);
+  padding: calc(var(--gap) * 2);
   margin-bottom: var(--gap);
+}
+
+.content-header {
+  margin-bottom: var(--gap);
+  text-align: center;
+
+  .content-title {
+    font-size: 2rem;
+
+    a {
+      color: var(--color-text);
+    }
+  }
+
+  .content-meta {
+    font-size: 0.75rem;
+
+    a {
+      color: var(--color-details);
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: calc(var(--gap) / 2);
+      }
+    }
+  }
 }
 
 // The Blog Layout

@@ -5,3 +5,15 @@ layout: blog
 {% for post in paginator.posts %}
   {% include blog/post.html %}
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <nav class="content-navigation">
+    <a class="nav-link prev-link" href="{{ paginator.previous_page_path }}" rel="prev">
+      &laquo; Next
+    </a>
+
+    <a class="nav-link next-link" href="{{ paginator.next_page_path }}" rel="next">
+      Previous &raquo;
+    </a>
+  </nav>
+{% endif %}
