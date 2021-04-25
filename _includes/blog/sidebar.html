@@ -4,7 +4,17 @@
 </form>
 
 <aside class="widget -sidebar">
-  <p>Sidebar placeholder.</p>
+  {% if site.data.social %}
+    <ul class="social-links">
+      {% for link in site.data.social %}
+        <li class="link">
+          <a href="{{ link.url }}" rel="external">
+            {{ link.icon }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 
   {% include blog/custom-widgets.html %}
 </aside>
