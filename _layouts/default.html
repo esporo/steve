@@ -10,5 +10,9 @@
     </main>
 
     {% include footer.html %}
+
+    {% if content contains "iframe" %}
+      <script src="{% link assets/js/responsive-videos.js %}"></script>
+    {% endif %}
   </body>
 </html>

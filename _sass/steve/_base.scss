@@ -53,10 +53,8 @@ body {
   ol,
   figure,
   iframe,
-  table,
-  hr {
-    margin-top: calc(var(--gap) / 2);
-    margin-bottom: calc(var(--gap) / 2);
+  table {
+    margin-bottom: var(--gap);
   }
 }
 
@@ -70,6 +68,21 @@ a {
   &:focus {
     color: var(--color-link-hover);
     text-decoration: underline;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-left: var(--gap);
+}
+
+dl {
+  dt + dd {
+    margin-bottom: calc(var(--gap) / 2);
+  }
+
+  dt + dd + dt {
+    margin-top: calc(var(--gap) / 2);
   }
 }
 
@@ -100,9 +113,12 @@ h4 {
   font-size: 1rem;
 }
 
-h5,
-h6 {
+h5 {
   font-size: 0.875rem;
+}
+
+h6 {
+  font-size: 0.75rem;
 }
 
 // Code
@@ -112,6 +128,38 @@ pre {
 }
 
 // Media
-img {
+img, iframe,
+video, audio {
   max-width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px var(--color-details);
+}
+
+// Tables
+table {
+  border: 1px solid var(--color-details-lighter);
+  border-radius: 3px;
+  border-collapse: collapse;
+  color: var(--color-details-darker);
+  width: 100%;
+
+  th, td {
+    border-bottom: 1px solid var(--color-details-lighter);
+    padding: calc(var(--gap) / 4);
+    text-align: left;
+  }
+
+  th {
+    background: var(--color-details-lighter);
+  }
+}
+
+// Horizontal rule
+hr {
+  width: 250px;
+  height: 3px;
+  margin: calc(var(--gap) * 2) auto;
+  background-color: var(--color-details-lighter);
+  border: none;
+  border-radius: 3px;
 }
