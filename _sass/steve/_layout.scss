@@ -100,6 +100,10 @@ body {
   background-color: var(--color-bg);
   padding: calc(var(--gap) * 2);
   margin-bottom: var(--gap);
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .content-header {
@@ -174,6 +178,21 @@ body {
 .blog-page {
   grid-area: content;
   min-width: 0;
+}
+
+// The Archive Layout
+.archive-header {
+  padding: var(--gap);
+  background: var(--color-bg);
+  margin-bottom: var(--gap);
+
+  h1 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    color: var(--color-details);
+  }
 }
 
 // Sidebar

@@ -12,7 +12,15 @@ baseurl: ""
 
 # Theme settings
 steve:
+  archive_title:
+    date: "Posts from"
+    tag: "More about"
+    category: "Category:"
   date_formats:
+    archive:
+      day: "%m/%d/%Y"
+      month: "%m/%Y"
+      year: "%Y"
     post: "%m/%d/%Y"
 
 # Build settings
@@ -31,9 +39,12 @@ plugins:
 
 # Plugin: jekyll-archives
 jekyll-archives:
-  enabled:
-    - tags
+  enabled: all
   layout: archive
   slug_mode: default
   permalinks:
+    day: "/:year/:month/:day/"
+    month: "/:year/:month/"
+    year: "/:year/"
+    category: "/:name/"
     tag: "/tag/:name/"

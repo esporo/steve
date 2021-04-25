@@ -35,7 +35,7 @@
     </figure>
   {% endif %}
 
-  {% unless include.full_post %}
+  {% unless include.full_post == false %}
     <div class="content-body">
       {{ post.content }}
     </div>

@@ -3,7 +3,13 @@ layout: blog
 ---
 
 <header class="archive-header">
-  <h1>{{ page.title }}</h1>
+  {% if page.date %}
+    <h1>
+      {{ site.steve.archive_title.date }} {{ page.date | date: site.steve.date_formats.archive[page.type] }}
+    </h1>
+  {% else %}
+    <h1>{{ site.steve.archive_title[page.type] }} {{ page.title }}</h1>
+  {% endif %}
 </header>
 
 {% for post in page.posts %}
