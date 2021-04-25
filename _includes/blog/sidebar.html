@@ -16,5 +16,23 @@
     </ul>
   {% endif %}
 
+  {% if site.data.blogroll %}
+    {% for blogroll in site.data.blogroll %}
+      <section class="blogroll">
+        <h4 class="blogroll-title">{{ blogroll.title }}</h4>
+
+        <ul class="blogroll-list">
+          {% for link in blogroll.links %}
+            <li class="link">
+              <a href="{{ link.url }}" {% if link.external %} rel="external" {% endif %}>
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  {% endif %}
+
   {% include blog/custom-widgets.html %}
 </aside>
