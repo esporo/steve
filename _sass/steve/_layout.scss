@@ -136,9 +136,18 @@ body {
   display: flex;
   align-items: center;
 
+  @media screen and (max-width: 600) {
+    flex-flow: column nowrap;
+ }
+
   .nav-link {
     background: var(--color-bg);
     padding: calc(var(--gap) / 2) var(--gap);
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin-bottom: var(--gap);
+    }
 
     &.prev-link {
       justify-self: flex-start;
@@ -148,6 +157,7 @@ body {
     &.next-link {
       justify-self: flex-end;
       margin-left: auto;
+      text-align: right;
     }
   }
 }
@@ -251,6 +261,7 @@ body {
 
   .blogroll-list {
     list-style: none;
+    margin-left: 0;
 
     .link {
       padding-top: calc(var(--gap) / 2);
