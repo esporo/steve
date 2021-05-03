@@ -5,13 +5,14 @@ description: Steve is a charming and fun blog theme for Jekyll websites.
 
 email: steve-support@esporo.net
 
-lang: en-US
+lang: en
 
 url: "https://esporo.github.io"
 baseurl: ""
 
 # Theme settings
 steve:
+  intensedebate_account: # get one at <https://intensedebate.com/install>
   archive_title:
     date: "Posts from"
     tag: "More about"

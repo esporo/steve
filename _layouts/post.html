@@ -2,6 +2,10 @@
 layout: blog
 ---
 
+{% assign lang = page.lang | default: site.lang %}
+
+{% assign locale = site.data.locales[lang] %}
+
 <article class="content post">
   <header class="content-header">
     {% if page.title != "" %}
@@ -13,7 +17,7 @@ layout: blog
     <div class="content-meta">
       <a class="content-date" href="{{ page.url }}" rel="bookmark">
         <time datetime="{{ page.date | date_to_xmlschema }}">
-          {{ page.date | date: site.steve.date_formats.post }}
+          {{ page.date | date: locale.date_formats.post }}
         </time>
       </a>
 
@@ -45,7 +49,7 @@ layout: blog
 
   {% if page.tags.size > 0 %}
     <footer class="content-footer">
-      <p>Tags:</p>
+      <p>{{ locale.post.tags }}</p>
 
       <ul class="content-tags">
         {% for tag in page.tags %}
@@ -62,17 +66,29 @@ layout: blog
   {% endif %}
 </article>
 
+{% if site.steve.intensedebate_account and page.comments != false %}
+  <section id="comments" class="content comments">
+      <script>
+        var idcomments_acct = "{{ site.steve.intensedebate_account }}";
+        var idcomments_post_id = "{{ post.date | date: "%s" }}";
+        var idcomments_post_url = "{{ post.url | absolute_url }}";
+      </script>
+      <span id="IDCommentsPostTitle" style="display:none"></span>
+      <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+  </section>
+{% endif %}
+
 {% if page.previous or page.next %}
   <nav class="content-navigation">
     {% if page.previous %}
       <a class="nav-link prev-link" href="{{ page.previous.url }}" rel="prev">
-        &laquo; Prev.: <strong>{{ page.previous.title }}</strong>
+        {{ locale.pagination.prev_post }} <strong>{{ page.previous.title }}</strong>
       </a>
     {% endif %}
 
     {% if page.next %}
       <a class="nav-link next-link" href="{{ page.next.url }}" rel="next">
-        Next: <strong>{{ page.next.title }}</strong> &raquo;
+        {{ locale.pagination.next_post }} <strong>{{ page.next.title }}</strong>
       </a>
     {% endif %}
   </nav>

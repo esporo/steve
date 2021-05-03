@@ -1,0 +1,22 @@
+archives: # Prefixes used with archive titles
+  date: Posts from
+  tag: More about…
+  category: Posts filed in
+date_formats: # Uses <http://strftime.net>
+  post: "%b %e, %Y"
+  archives:
+    day: "%b %e, %Y"
+    month: "%b, %Y"
+    year: "%Y"
+pagination:
+  next_page: "&laquo; Next"
+  prev_page: "Previous &raquo;"
+  prev_post: "Previous:"
+  next_post: "Next:"
+search:
+  label: Search
+  placeholder: Search terms
+  submit: Go!
+post:
+  byline: "By"
+  tags: More about…

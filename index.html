@@ -2,6 +2,10 @@
 layout: blog
 ---
 
+{% assign lang = page.lang | default: site.lang %}
+
+{% assign locale = site.data.locales[lang] %}
+
 {% for post in paginator.posts %}
   {% include blog/post.html %}
 {% endfor %}
@@ -10,13 +14,13 @@ layout: blog
   <nav class="content-navigation">
     {% if paginator.previous_page %}
       <a class="nav-link prev-link" href="{{ paginator.previous_page_path }}" rel="prev">
-        &laquo; Next
+        {{ locale.pagination.next_page }}
       </a>
     {% endif %}
 
     {% if paginator.next_page %}
       <a class="nav-link next-link" href="{{ paginator.next_page_path }}" rel="next">
-        Previous &raquo;
+        {{ locale.pagination.prev_page }}
       </a>
     {% endif %}
   </nav>

@@ -132,6 +132,36 @@ body {
   }
 }
 
+.content-footer {
+  margin-top: var(--gap);
+  font-size: 0.75rem;
+  color: var(--color-details);
+
+  .content-tags {
+    display: block;
+    list-style: none;
+    margin-left: 0;
+
+    li {
+      display: inline-block;
+      font-size: 0.875rem;
+
+      &:not(:last-child) {
+        &::after {
+          padding-left: calc(var(--gap) / 4);
+          padding-right: calc(var(--gap) / 4);
+          content: "/";
+          color: var(--color-details-lighter);
+        }
+      }
+
+      a {
+        color: var(--color-details-darker);
+      }
+    }
+  }
+}
+
 .content-navigation {
   display: flex;
   align-items: center;
