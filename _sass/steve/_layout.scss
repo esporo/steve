@@ -22,9 +22,14 @@ body {
     margin-bottom: var(--gap);
     text-align: center;
     color: var(--color-link);
+    overflow: visible;
 
     .logo {
+      display: inline-block;
       max-width: 250px;
+      margin: calc(var(--gap) / 4);
+      box-shadow: none;
+      filter: drop-shadow(0 0 7px var(--color-details-lighter));
     }
 
     &:hover,
