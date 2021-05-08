@@ -45,6 +45,8 @@ steve:
 markdown: kramdown
 permalink: "/:year/:month/:day/:title/"
 
+theme: steve-for-jekyll
+
 paginate: 6
 paginate_path: "/page/:num/"
 
