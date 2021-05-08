@@ -2,13 +2,7 @@
 
 {% assign locale = site.data.locales[lang] %}
 
-<form action="//duckduckgo.com" method="get" class="widget -search">
-  <label for="search_terms">{{ locale.search.label }}</label><br />
-  <input id="search_terms" placeholder="{{ locale.search.placeholder }}" type="search" name="q" required />
-  <button type="submit">
-    {{ locale.search.submit }}
-  </button>
-</form>
+{% include search-form.html class="widget -search" %}
 
 <aside class="widget -sidebar">
   {% if site.data.social %}

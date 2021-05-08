@@ -1,0 +1,17 @@
+{% assign lang = page.lang | default: site.lang %}
+
+{% assign locale = site.data.locales[lang] %}
+
+<form action="//duckduckgo.com" method="get" {% if include.class %}class="{{ include.class }}"{% endif %}>
+  <label for="search_terms">{{ locale.search.label }}</label>
+
+  <div class="search-controls">
+
+    <input id="search_terms" placeholder="{{ locale.search.placeholder }}" type="search" name="q" required />
+    <input type="hidden" name="sites" value="{{ site.url | remove: 'https://' }}" />
+    <button type="submit">
+      {{ locale.search.submit }}
+    </button>
+
+  </div>
+</form>

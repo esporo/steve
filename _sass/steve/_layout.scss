@@ -314,6 +314,18 @@ body {
   }
 }
 
+// Search Form
+
+.search-controls {
+  display: flex;
+  flex-flow: row nowrap;
+
+  input[name="q"] {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
 /*
   Site Footer
 */
