@@ -9,13 +9,13 @@ layout: blog
 {% if paginator.total_pages > 1 %}
   <nav class="content-navigation">
     {% if paginator.previous_page %}
-      <a class="nav-link prev-link" href="{{ paginator.previous_page_path }}" rel="prev">
+      <a class="nav-link prev-link" href="{{ paginator.previous_page_path | relative_url }}" rel="prev">
         {{ site.steve.pagination.next_page }}
       </a>
     {% endif %}
 
     {% if paginator.next_page %}
-      <a class="nav-link next-link" href="{{ paginator.next_page_path }}" rel="next">
+      <a class="nav-link next-link" href="{{ paginator.next_page_path | relative_url }}" rel="next">
         {{ site.steve.pagination.prev_page }}
       </a>
     {% endif %}

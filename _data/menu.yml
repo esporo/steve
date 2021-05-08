@@ -1,12 +1,12 @@
 - title: "Posts"
   url: "/"
 - title: "About"
-  url: "/bout/"
+  url: "/steve/about/"
   color: "#b1cd49"
 - title: GitHub
   url: "https://github.com/esporo/steve"
   external: true
   color: "#f4932f"
 - title: Help
-  url: "/tag/help/"
+  url: "/steve/tag/help/"
   color: "#ca0088"

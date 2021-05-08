@@ -2,12 +2,12 @@
   <header class="content-header">
     {% if post.title != "" %}
       <h2 class="content-title">
-        <a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+        <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>
       </h2>
     {% endif %}
 
     <div class="content-meta">
-      <a class="content-date" href="{{ post.url }}" rel="bookmark">
+      <a class="content-date" href="{{ post.url | relative_url }}" rel="bookmark">
         <time datetime="{{ post.date | date_to_xmlschema }}">
           {{ post.date | date: site.steve.date_formats.post }}
         </time>

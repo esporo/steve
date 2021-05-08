@@ -52,7 +52,7 @@ layout: blog
         <li>
           {%- assign tag_slug = tag | slugify -%}
 
-          <a href="{{ site.jekyll-archives.permalinks.tag | replace: ':name', tag_slug }}" rel="tag">
+          <a href="{{ site.jekyll-archives.permalinks.tag | replace: ':name', tag_slug | relative_url }}" rel="tag">
             {{ tag }}
           </a>
         </li>
@@ -77,13 +77,13 @@ layout: blog
 {% if page.previous or page.next %}
   <nav class="content-navigation">
     {% if page.previous %}
-      <a class="nav-link prev-link" href="{{ page.previous.url }}" rel="prev">
+      <a class="nav-link prev-link" href="{{ page.previous.url | relative_url }}" rel="prev">
         {{ site.steve.pagination.prev_post }} <strong>{{ page.previous.title }}</strong>
       </a>
     {% endif %}
 
     {% if page.next %}
-      <a class="nav-link next-link" href="{{ page.next.url }}" rel="next">
+      <a class="nav-link next-link" href="{{ page.next.url | relative_url }}" rel="next">
         {{ site.steve.pagination.next_post }} <strong>{{ page.next.title }}</strong>
       </a>
     {% endif %}
