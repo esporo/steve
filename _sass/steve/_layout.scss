@@ -227,11 +227,15 @@ body {
   margin-bottom: var(--gap);
 
   h1 {
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 0.75rem;
     font-weight: normal;
     color: var(--color-details);
+
+    strong {
+      font-size: 1.75rem;
+      color: var(--color-text);
+      text-transform: uppercase;
+    }
   }
 }
 

@@ -154,6 +154,21 @@ table {
   }
 }
 
+// Quotes
+
+blockquote {
+  border-left: 4px solid var(--color-details-lighter);
+  padding-left: calc(var(--gap) / 2);
+  padding-top: calc(var(--gap) / 4);
+  padding-bottom: calc(var(--gap) / 4);
+  font-style: italic;
+  color: var(--color-details-darker);
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
 // Horizontal rule
 hr {
   width: 250px;
