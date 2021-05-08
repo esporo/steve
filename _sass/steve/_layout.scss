@@ -29,7 +29,7 @@ body {
       max-width: 250px;
       margin: calc(var(--gap) / 4);
       box-shadow: none;
-      filter: drop-shadow(0 0 7px var(--color-details-lighter));
+      filter: drop-shadow(0 0 var(--gap) var(--color-details-lighter));
     }
 
     &:hover,
@@ -76,6 +76,7 @@ body {
 }
 
 .menu-item {
+  flex: 1 0 auto;
   color: rgba(255, 255, 255, 0.7);
   background-color: var(--color-link);
   border-radius: 1.5rem;
@@ -106,6 +107,11 @@ body {
   padding: calc(var(--gap) * 2);
   margin-bottom: var(--gap);
 
+  @media screen and (max-width: 600px) {
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+  }
+
   & > *:last-child {
     margin-bottom: 0;
   }
@@ -135,6 +141,10 @@ body {
       }
     }
   }
+}
+
+.content-body > :last-child {
+  margin-bottom: 0;
 }
 
 .content-footer {
@@ -334,6 +344,7 @@ label[for="search_terms"] {
 .search-controls {
   display: flex;
   flex-flow: row nowrap;
+  font-size: 0.75rem;
 
   input[name="q"] {
     max-width: 400px;
