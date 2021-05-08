@@ -53,7 +53,8 @@ body {
   ol,
   figure,
   iframe,
-  table {
+  table,
+  .highlight {
     margin-bottom: var(--gap);
   }
 }

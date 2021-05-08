@@ -25,7 +25,7 @@ layout: blog
             {{ author.name }}
           </a>
         {% else %}
-          <a class="content-author" href="{{ site.twitter.username | append: 'https://twitter.com/' }}" rel="author">
+          <a class="content-author" href="{{ page.author | prepend: 'https://twitter.com/' }}" rel="author">
             {{ page.author }}
           </a>
         {% endif %}

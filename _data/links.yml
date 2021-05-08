@@ -1,9 +1,6 @@
-- title: Twitter
-  url: "https://twitter.com/esporo"
-  external: true
-- title: YouTube
-  url: "https://www.youtube.com/u/esporotv"
-  external: true
 - title: GitHub
-  url: "https://github.com/esporo"
+  url: "https://github.com/esporo/steve"
+  external: true
+- title: Made by Arthur
+  url: "https://arthr.dev"
   external: true

@@ -7,7 +7,7 @@ email: steve-support@esporo.net
 
 lang: en
 
-url: "https://esporo.github.io"
+url: "https://esporo.github.io/steve"
 baseurl: ""
 
 # Theme settings
@@ -45,7 +45,7 @@ steve:
 markdown: kramdown
 permalink: "/:year/:month/:day/:title/"
 
-paginate: 2
+paginate: 6
 paginate_path: "/page/:num/"
 
 plugins:
