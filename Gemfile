@@ -8,5 +8,3 @@ install_if -> { Gem.win_platform? } do
   gem "tzinfo", "~> 2.0.4"
   gem "tzinfo-data"
 end
-
-gem "jekyll-compose", "~> 0.12.0"
