@@ -73,21 +73,21 @@ You can change Steve's appearance with a different color scheme or typography se
 
 1. Create a `screen.scss` file in `assets/css`.
 2. Add the following content:
-    ```sass
----
----
+    ```scss
+    ---
+    ---
 
-@import "{{ site.theme }}";
+    @import "{{ site.theme }}";
     ```
 3. Before the `@import` declaration, you can set the following custom SCSS variables:
 
-```sass
+```scss
 /*
   Color Scheme
 */
 
 $color__background-content: #fff; // posts, pages and sidebar background color.
-$color__background-body: #e4f0f6; // body background color
+$color__background-body: #e4f0f6; // body background color:
 $color__text: #000112; // body text color
 
 $color__link: #4e9dd8; // color for links and accents
