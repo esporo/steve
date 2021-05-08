@@ -1,24 +1,21 @@
-# steve
+# Steve for Jekyll
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+Steve is a charming and fun blog theme for [Jekyll](https://jekyllrb.com/), the static site generator. It's developed by [@arthrfrts](https://github.com/arthrfrts) to be used on the [Esporo](https://esporo.net/) website.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
+See it in action on the [demo site](https://esporo.github.io/steve).
 
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "steve"
+gem "steve-for-jekyll"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: steve
+theme: steve-for-jekyll
 ```
 
 And then execute:
@@ -31,7 +28,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+### 1. Install dependencies
 
 ## Contributing
 
