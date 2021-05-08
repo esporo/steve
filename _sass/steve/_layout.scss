@@ -200,7 +200,8 @@ body {
 // The Blog Layout
 .layout-blog,
 .layout-post,
-.layout-archive {
+.layout-archive,
+.layout-home {
   .container {
     display: grid;
     gap: var(--gap);

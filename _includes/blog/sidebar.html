@@ -4,36 +4,43 @@
 
 {% include search-form.html class="widget -search" %}
 
-<aside class="widget -sidebar">
-  {% if site.data.social %}
-    <ul class="social-links">
-      {% for link in site.data.social %}
-        <li class="link">
-          <a href="{{ link.url }}" rel="external">
-            {{ link.icon }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
-
-  {% if site.data.blogroll %}
-    {% for blogroll in site.data.blogroll %}
-      <section class="blogroll">
-        <h4 class="blogroll-title">{{ blogroll.title }}</h4>
-
-        <ul class="blogroll-list">
-          {% for link in blogroll.links %}
-            <li class="link">
-              <a href="{{ link.url }}" {% if link.external %} rel="external" {% endif %}>
-                {{ link.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-    {% endfor %}
-  {% endif %}
-
+{% capture custom_widgets %}
   {% include blog/custom-widgets.html %}
-</aside>
+{% endcapture %}
+
+{% assign custom_widgets = custom_widgets | strip | strip_newlines | normalize_whitespace %}
+
+{% if site.data.social or site.data.blogroll or custom_widgets != "" %}
+  <aside class="widget -sidebar">
+    {% if site.data.social %}
+      <ul class="social-links">
+        {% for link in site.data.social %}
+          <li class="link">
+            <a href="{{ link.url }}" rel="external">
+              {{ link.icon }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    {% if site.data.blogroll %}
+      {% for blogroll in site.data.blogroll %}
+        <section class="blogroll">
+          <h4 class="blogroll-title">{{ blogroll.title }}</h4>
+
+          <ul class="blogroll-list">
+            {% for link in blogroll.links %}
+              <li class="link">
+                <a href="{{ link.url }}" {% if link.external %} rel="external" {% endif %}>
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </section>
+      {% endfor %}
+    {% endif %}
+
+    {{ custom_widgets }}
+  </aside>
+{% endif %}

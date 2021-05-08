@@ -1,0 +1,27 @@
+---
+layout: blog
+---
+
+{% assign lang = page.lang | default: site.lang %}
+
+{% assign locale = site.data.locales[lang] %}
+
+{% for post in paginator.posts %}
+  {% include blog/post.html %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <nav class="content-navigation">
+    {% if paginator.previous_page %}
+      <a class="nav-link prev-link" href="{{ paginator.previous_page_path }}" rel="prev">
+        {{ locale.pagination.next_page }}
+      </a>
+    {% endif %}
+
+    {% if paginator.next_page %}
+      <a class="nav-link next-link" href="{{ paginator.next_page_path }}" rel="next">
+        {{ locale.pagination.prev_page }}
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}
