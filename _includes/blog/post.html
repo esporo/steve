@@ -1,7 +1,3 @@
-{% assign lang = page.lang | default: site.lang %}
-
-{% assign locale = site.data.locales[lang] %}
-
 <article class="content post">
   <header class="content-header">
     {% if post.title != "" %}
@@ -13,7 +9,7 @@
     <div class="content-meta">
       <a class="content-date" href="{{ post.url }}" rel="bookmark">
         <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date: locale.date_formats.post }}
+          {{ post.date | date: site.steve.date_formats.post }}
         </time>
       </a>
 

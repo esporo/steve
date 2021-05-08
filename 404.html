@@ -4,10 +4,6 @@ title: 404
 permalink: /404.html
 ---
 
-{% assign lang = page.lang | default: site.lang %}
-
-{% assign locale = site.data.locales[lang] %}
-
-{{ locale.page_404 | markdownify }}
+{{ site.steve.page_404 | markdownify }}
 
 {% include search-form.html %}

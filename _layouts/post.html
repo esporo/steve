@@ -2,10 +2,6 @@
 layout: blog
 ---
 
-{% assign lang = page.lang | default: site.lang %}
-
-{% assign locale = site.data.locales[lang] %}
-
 <article class="content post">
   <header class="content-header">
     {% if page.title != "" %}
@@ -17,7 +13,7 @@ layout: blog
     <div class="content-meta">
       <a class="content-date" href="{{ page.url }}" rel="bookmark">
         <time datetime="{{ page.date | date_to_xmlschema }}">
-          {{ page.date | date: locale.date_formats.post }}
+          {{ page.date | date: site.steve.date_formats.post }}
         </time>
       </a>
 
@@ -49,7 +45,7 @@ layout: blog
 
   {% if page.tags.size > 0 %}
     <footer class="content-footer">
-      <p>{{ locale.post.tags }}</p>
+      <p>{{ site.steve.post.tags }}</p>
 
       <ul class="content-tags">
         {% for tag in page.tags %}
@@ -82,13 +78,13 @@ layout: blog
   <nav class="content-navigation">
     {% if page.previous %}
       <a class="nav-link prev-link" href="{{ page.previous.url }}" rel="prev">
-        {{ locale.pagination.prev_post }} <strong>{{ page.previous.title }}</strong>
+        {{ site.steve.pagination.prev_post }} <strong>{{ page.previous.title }}</strong>
       </a>
     {% endif %}
 
     {% if page.next %}
       <a class="nav-link next-link" href="{{ page.next.url }}" rel="next">
-        {{ locale.pagination.next_post }} <strong>{{ page.next.title }}</strong>
+        {{ site.steve.pagination.next_post }} <strong>{{ page.next.title }}</strong>
       </a>
     {% endif %}
   </nav>

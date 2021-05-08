@@ -2,19 +2,15 @@
 layout: blog
 ---
 
-{% assign lang = page.lang | default: site.lang %}
-
-{% assign locale = site.data.locales[lang] %}
-
 <header class="archive-header">
   {% if page.date %}
     <h1>
-      {{ locale.archives.date }}<br />
-      <strong>{{ page.date | date: locale.date_formats.archives[page.type] }}</strong>
+      {{ site.steve.archives.date }}<br />
+      <strong>{{ page.date | date: site.steve.date_formats.archives[page.type] }}</strong>
     </h1>
   {% else %}
     <h1>
-      {{ locale.archives[page.type] }}<br />
+      {{ site.steve.archives[page.type] }}<br />
       <strong>{{ page.title }}</strong>
     </h1>
   {% endif %}
