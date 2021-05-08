@@ -163,3 +163,71 @@ hr {
   border: none;
   border-radius: 3px;
 }
+
+// Forms
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="color"],
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--color-bg);
+  padding: 5px;
+  margin: 0;
+  font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+input[type="color"],
+textarea {
+  border-bottom: 3px dashed var(--color-details-lighter);
+  transition: border-bottom-color 250ms ease;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-bottom-color: var(--color-link);
+  }
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
+  box-shadow: inset 0 0 0 var(--color-details-lighter);
+  border-bottom: 3px solid var(--color-details-lighter);
+  color: var(--color-link);
+  transition-property: color, box-shadow, border-bottom-color;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    box-shadow: inset 0 -2.5em 0 var(--color-link);
+    border-bottom-color: var(--color-link-hover);
+    color: var(--color-details-lighter);
+  }
+
+  &:active {
+    box-shadow: inset 0 -2.5em 0 var(--color-link-hover);
+  }
+}
