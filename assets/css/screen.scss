@@ -31,4 +31,4 @@
 // $layout__container-width: 1180px; // the width of the main content (content + sidebar)
 // $layout__gutter: 2rem; // the spacing unit between elements.
 
-@import "steve";
+@import "{{ site.theme }}";
