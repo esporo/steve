@@ -73,12 +73,14 @@ You can change Steve's appearance with a different color scheme or typography se
 
 1. Create a `screen.scss` file in `assets/css`.
 2. Add the following content:
-    ```scss
-    ---
-    ---
 
-    @import "{{ site.theme }}";
-    ```
+   ```scss
+   ---
+   ---
+
+   @import "{{ site.theme }}";
+   ```
+
 3. Before the `@import` declaration, you can set the following custom SCSS variables:
 
 ```scss
@@ -105,12 +107,11 @@ $font__body: sans-serif; // used for the main, body typography
 $font__headings: sans-serif; // used for headings and feature elements
 $font__code: monospace; // used for pre-formatted text and code.
 
-
 /*
   Layout
 */
 $layout__container-width: 1180px; // the width of the main content (content + sidebar)
-$layout__gutter: 2rem ; // the spacing unit between elements.
+$layout__gutter: 2rem; // the spacing unit between elements.
 ```
 
 You can change the values to any variable you want. Steve will replace the default values set by the theme with the ones you choose. Be sure that the variable definitions are **above** your `@import "{{ site.theme }}"` declaration.
@@ -123,16 +124,16 @@ Steve supports two editable areas and three different menus.
 
 You can add any content you want in your site's sidebar or footer.
 
-* Create a `custom-widgets.html` file in `_includes/blog/` to add custom content to your site's sidebar.
-* Create a `custom-text.html` file in `_includes/footer` to add custom content to your site's footer.
+- Create a `custom-widgets.html` file in `_includes/blog/` to add custom content to your site's sidebar.
+- Create a `custom-text.html` file in `_includes/footer` to add custom content to your site's footer.
 
 #### Menus
 
 Steve has three menu positions controlled using [Jekyll data files](https://jekyllrb.com/docs/datafiles/):
 
-* `_data/menu.yml` &mdash; The main menu, above the website content.
-* `_data/social.yml` &mdash; The social menu, in the website sidebar.
-* `_data/links.yml` &mdash; And a third menu at the bottom of your website's footer.
+- `_data/menu.yml` &mdash; The main menu, above the website content.
+- `_data/social.yml` &mdash; The social menu, in the website sidebar.
+- `_data/links.yml` &mdash; And a third menu at the bottom of your website's footer.
 
 Create the respective data file for the menu you want to use. Menus are a YAML List with the following structure:
 
@@ -151,12 +152,12 @@ Blogrolls are linked lists shown in your site's sidebar.Like menus, you can set 
 ```yaml
 - title: Blogroll # The blogroll title shown in the sidebar
   links: # The list of links in this blogroll
-  - title: Link 1
-    url: "https://example.com"
-  - title: Link 2
-    url: "https://example.net"
-  - title: Link 3
-    url: "https://example.org"
+    - title: Link 1
+      url: "https://example.com"
+    - title: Link 2
+      url: "https://example.net"
+    - title: Link 3
+      url: "https://example.org"
 - title: Blogroll 2
   links:
     - title: Link 1
@@ -165,7 +166,7 @@ Blogrolls are linked lists shown in your site's sidebar.Like menus, you can set 
       url: "https://example.net"
     - title: Link 3
       url: "https://example.org"
-``` 
+```
 
 ### Plugin-specific settings
 
@@ -190,9 +191,8 @@ To set up your environment to develop this theme, run `bundle install`.
 Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `steve.gemspec` accordingly.
+To add a custom directory to your theme-gem, please edit the regexp in `steve-for-jekyll.gemspec` accordingly.
 
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
