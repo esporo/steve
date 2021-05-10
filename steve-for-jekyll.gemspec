@@ -6,11 +6,11 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Arthur Freitas"]
   spec.email         = ["email@arthr.me"]
 
-  spec.summary       = "A charming, fun blogging theme for Jekyll."
+  spec.summary       = "A charming and fun Jekyll theme for blogs."
   spec.homepage      = "https://github.com/esporo/steve"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|404\.html|LICENSE|README|_config\.yml)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "webrick", "~> 1.7"
@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-archives", "~> 2.2"
 
-  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "bundler", "~> 2.2"
 end
