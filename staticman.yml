@@ -1,6 +1,6 @@
 comments:
   name: steve-for-jekyll
-  branch: main
+  branch: feat-staticman-support
   comment: "adds staticman data"
   path: "_data/comments/{options.slug}"
   filename: "comment-{@timestamp}"
