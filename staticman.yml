@@ -19,7 +19,7 @@ comments:
     - name
     - email
     - message
-  transform:
+  transforms:
     email: md5
   allowedOrigins:
     - "esporo.github.io"
