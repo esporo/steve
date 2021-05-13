@@ -5,9 +5,7 @@ layout: blog
 <article class="content post">
   <header class="content-header">
     {% if page.title != "" %}
-      <h1 class="content-title">
-        {{ page.title }}
-      </h1>
+      <h1 class="content-title">{{ page.title }}</h1>
     {% endif %}
 
     <div class="content-meta">
@@ -25,7 +23,11 @@ layout: blog
             {{ author.name }}
           </a>
         {% else %}
-          <a class="content-author" href="{{ page.author | prepend: 'https://twitter.com/' }}" rel="author">
+          <a
+            class="content-author"
+            href="{{ page.author | prepend: 'https://twitter.com/' }}"
+            rel="author"
+          >
             {{ page.author }}
           </a>
         {% endif %}
@@ -34,9 +36,12 @@ layout: blog
   </header>
 
   {% if page.image %}
-  <fig[ure class="content-cover">
-    <img src="{{ page.image.url | default: page.image }}" alt="{{ page.image.alt | default: '' }}" />
-  </fi]gure>
+    <figure class="content-cover">
+      <img
+        src="{{ page.image.url | default: page.image }}"
+        alt="{{ page.image.alt | default: '' }}"
+      />
+    </figure>
   {% endif %}
 
   <div class="content-body">
@@ -49,44 +54,48 @@ layout: blog
 
       <ul class="content-tags">
         {% for tag in page.tags %}
-        <li>
-          {%- assign tag_slug = tag | slugify -%}
+          <li>
+            {%- assign tag_slug = tag | slugify -%}
+            {%- assign tag_url = site.jekyll-archives.permalinks.tag -%}
 
-          <a href="{{ site.jekyll-archives.permalinks.tag | replace: ':name', tag_slug | relative_url }}" rel="tag">
-            {{ tag }}
-          </a>
-        </li>
+            <a
+              href="{{ tag_url | replace: ':name', tag_slug | relative_url }}"
+              rel="tag"
+            >
+              {{- tag -}}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </footer>
   {% endif %}
 </article>
 
-{% if site.steve.intensedebate_account and page.comments != false %}
-  <section id="comments" class="content comments">
-      <script>
-        var idcomments_acct = "{{ site.steve.intensedebate_account }}";
-        var idcomments_post_id = "{{ post.date | date: "%s" }}";
-        var idcomments_post_url = "{{ post.url | absolute_url }}";
-      </script>
-      <span id="IDCommentsPostTitle" style="display:none"></span>
-      <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
-  </section>
-{% endif %}
+{% include post/comments.html %}
 
 {% if page.previous or page.next %}
   <nav class="content-navigation">
     {% if page.previous %}
-      <a class="nav-link prev-link" href="{{ page.previous.url | relative_url }}" rel="prev">
-        {{ site.steve.pagination.prev_post }} <strong>{{ page.previous.title }}</strong>
+      <a
+        class="nav-link prev-link"
+        href="{{ page.previous.url | relative_url }}"
+        rel="prev"
+      >
+        {{ site.steve.pagination.prev_post }}
+
+        <strong>{{ page.previous.title }}</strong>
       </a>
     {% endif %}
-
     {% if page.next %}
-      <a class="nav-link next-link" href="{{ page.next.url | relative_url }}" rel="next">
-        {{ site.steve.pagination.next_post }} <strong>{{ page.next.title }}</strong>
+      <a
+        class="nav-link next-link"
+        href="{{ page.next.url | relative_url }}"
+        rel="next"
+      >
+        {{ site.steve.pagination.next_post }}
+
+        <strong>{{ page.next.title }}</strong>
       </a>
     {% endif %}
   </nav>
 {% endif %}
-
