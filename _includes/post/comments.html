@@ -7,29 +7,33 @@
     {% if site.data.comments[page.slug] %}
       <ol class="comments-list">
 
-        {% for comment in site.data.comments[page.slug] %}
-          {% assign comment_body = comment | last %}
+        {% assign comments = site.data.comments[page.slug] | sort: date %}
+
+        {% for comment_object in site.data.comments[page.slug] %}
+
+          {% assign comment = comment_object | last %}
+
           <li class="comment-item">
             <section class="comment">
               <header class="comment-meta">
-                <img class="author-avatar" src="//www.gravatar.com/avatar/{{ comment_body.email }}?d=monsterid&s=64" alt="" />
+                <img class="author-avatar" src="//www.gravatar.com/avatar/{{ comment.email }}?d=monsterid&s=64" alt="" />
                 <h5 class="author">
-                  {% if comment_body.website %}
-                    <a href="{{ comment_body.website }}" rel="author">
-                      {{ comment_body.name }}
+                  {% if comment.website %}
+                    <a href="{{ comment.website }}" rel="author">
+                      {{ comment.name }}
                     </a>
                   {% else %}
-                    {{ comment_body.name }}
+                    {{ comment.name }}
                   {% endif %}
                 </h5>
 
                 <time class="comment-date">
-                  {{ comment_body.date | date: site.comments.date_format }}
+                  {{ comment.date | date: site.comments.date_format }}
                 </time>
               </header>
 
               <div class="comment-body">
-                {{ comment_body.message | markdownify }}
+                {{ comment.message | markdownify }}
               </div>
             </section>
           </li>
