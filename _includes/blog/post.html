@@ -1,5 +1,19 @@
 <article class="content post">
   <header class="content-header">
+    {% if post.category %}
+      <div class="content-meta">
+        {%- assign category_slug = post.category | slugify -%}
+        {%- assign category_url = site.jekyll-archives.permalinks.category -%}
+
+        <a
+          href="{{ category_url | replace: ':name', category_slug | relative_url }}"
+          rel="tag"
+        >
+          {{- post.category -}}
+        </a>
+      </div>
+    {% endif %}
+
     {% if post.title != "" %}
       <h2 class="content-title">
         <a href="{{ post.url | relative_url }}" rel="bookmark">{{ post.title }}</a>

@@ -2,6 +2,7 @@
 layout: post
 title: Setting up your theme
 date: 2021-05-06 17:58 -0300
+category: Help
 tags:
   - help
   - tutorials

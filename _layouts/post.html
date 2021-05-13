@@ -4,6 +4,20 @@ layout: blog
 
 <article class="content post">
   <header class="content-header">
+    {% if page.category %}
+      <div class="content-meta">
+        {%- assign category_slug = page.category | slugify -%}
+        {%- assign category_url = site.jekyll-archives.permalinks.category -%}
+
+        <a
+          href="{{ category_url | replace: ':name', category_slug | relative_url }}"
+          rel="tag"
+        >
+          {{- page.category -}}
+        </a>
+      </div>
+    {% endif %}
+
     {% if page.title != "" %}
       <h1 class="content-title">{{ page.title }}</h1>
     {% endif %}
