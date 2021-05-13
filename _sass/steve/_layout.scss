@@ -354,6 +354,48 @@ label[for="search_terms"] {
 
 // Comments
 
+.comments-title {
+  margin-bottom: var(--gap);
+}
+
+.comments-notice {
+  margin-top: calc(var(--gap) / 2);
+  margin-bottom: calc(var(--gap) / 2);
+  color: var(--color-details-darker);
+}
+
+.comments-list {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: var(--gap);
+
+  .comment-item {
+    margin-bottom: var(--gap);
+    padding-bottom: var(--gap);
+    border-bottom: 3px dotted var(--color-details-lighter);
+  }
+}
+
+.comment {
+  font-size: 95%;
+
+  .comment-meta {
+    margin-bottom: 1rem;
+  }
+
+  .author-avatar {
+    width: 2.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 2px var(--color-details);
+    float: left;
+    margin-right: 1rem;
+  }
+
+  .comment-body > *:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+}
+
 .comment-message-area {
   margin-bottom: calc(var(--gap) / 2);
 }

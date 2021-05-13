@@ -41,8 +41,16 @@ steve:
 
 # Comments Settings
 comments:
+  title: Comments
   form_title: New Comment
-  staticman_endpoint: "https://sample-staticman.herokuapp.com/v3/github/esporo/steve/comments"
+  date_format: "%b %e, %Y @ %l:%M %P"
+  staticman_endpoint: # Get yours on <https://staticman.net>
+  notice: |+
+    Please be nice in the comments.
+
+    Comments are moderated, so it can take a while for your's to show up.
+
+    Also, you can use [Markdown](https://daringfireball.net/projects/markdown).
   fields:
     name:
       label: Name

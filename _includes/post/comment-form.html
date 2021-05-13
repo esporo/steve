@@ -1,5 +1,10 @@
 <form action="{{ site.comments.staticman_endpoint }}" method="post">
   <h3 class="form-title">{{ site.comments.form_title }}</h3>
+
+  <div class="comments-notice">
+    {{ site.comments.notice | markdownify }}
+  </div>
+
   <div class="comment-message-area">
     <label for="comment_message" class="visually-hidden">
       {{ site.comments.fields.message.label }}
@@ -47,7 +52,7 @@
       type="url"
       id="comment_website"
       class="comment-field"
-      name="fields[email]"
+      name="fields[website]"
       placeholder="{{ site.comments.fields.website.placeholder }}"
     />
   </div>
