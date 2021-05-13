@@ -1,0 +1,5 @@
+{% if site.comments.staticman_endpoint and page.comments != false %}
+  <section id="comments" class="content">
+    {% include post/comment-form.html %}
+  </section>
+{% endif %}

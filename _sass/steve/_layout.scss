@@ -352,6 +352,39 @@ label[for="search_terms"] {
   }
 }
 
+// Comments
+
+.comment-message-area {
+  margin-bottom: calc(var(--gap) / 2);
+}
+
+.message-area {
+  width: 100%;
+  resize: vertical;
+}
+
+.comment-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: calc(var(--gap) / 2);
+  margin-bottom: calc(var(--gap) / 2);
+
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    flex-flow: column nowrap;
+  }
+
+  input {
+    min-width: 0;
+    width: auto;
+  }
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /*
   Site Footer
 */

@@ -12,7 +12,6 @@ baseurl: "/steve/"
 
 # Theme settings
 steve:
-  intensedebate_account: # get one at <https://intensedebate.com/install>
   archives: # Prefixes used with archive titles
     date: Posts from
     tag: More about…
@@ -39,6 +38,25 @@ steve:
     label: Search this blog
     placeholder: What you're looking for?
     submit: Go!
+
+# Comments Settings
+comments:
+  form_title: New Comment
+  staticman_endpoint: "https://sample-staticman.herokuapp.com/v3/github/esporo/steve/comments"
+  fields:
+    name:
+      label: Name
+      placeholder: "John Appleseed"
+    email:
+      label: Email address
+      placeholder: "your@email.net"
+    website:
+      label: Website
+      placeholder: "https://john.blog/"
+    message:
+      label: Message
+      placeholder: Your comment message
+    submit: Submit Comment
 
 
 # Build settings

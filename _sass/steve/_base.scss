@@ -25,6 +25,19 @@ body {
 }
 
 /*
+  Accessibility helpers
+*/
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/*
   Text Elements
 */
 
@@ -161,6 +174,7 @@ input[type="search"],
 input[type="tel"],
 input[type="number"],
 input[type="color"],
+input[type="url"],
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
@@ -184,6 +198,7 @@ input[type="search"],
 input[type="tel"],
 input[type="number"],
 input[type="color"],
+input[type="url"],
 textarea {
   border-bottom: 3px dashed var(--color-details-lighter);
   transition: border-bottom-color 250ms ease;
