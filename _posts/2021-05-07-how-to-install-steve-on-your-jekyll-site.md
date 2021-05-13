@@ -3,6 +3,7 @@ layout: post
 title: How to install Steve on your Jekyll site
 date: 2021-05-07 17:55 -0300
 author: arthrfrts
+category: Help
 tags: help
 ---
 
