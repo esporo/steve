@@ -12,7 +12,6 @@ baseurl: "/steve/"
 
 # Theme settings
 steve:
-  intensedebate_account: # get one at <https://intensedebate.com/install>
   archives: # Prefixes used with archive titles
     date: Posts from
     tag: More about…
@@ -39,6 +38,33 @@ steve:
     label: Search this blog
     placeholder: What you're looking for?
     submit: Go!
+
+# Comments Settings
+comments:
+  title: Comments
+  form_title: New Comment
+  date_format: "%b %e, %Y @ %l:%M %P"
+  staticman_endpoint: # Get yours on <https://staticman.net>
+  notice: |+
+    Please be nice in the comments.
+
+    Comments are moderated, so it can take a while for your's to show up.
+
+    Also, you can use [Markdown](https://daringfireball.net/projects/markdown).
+  fields:
+    name:
+      label: Name
+      placeholder: "John Appleseed"
+    email:
+      label: Email address
+      placeholder: "your@email.net"
+    website:
+      label: Website
+      placeholder: "https://john.blog/"
+    message:
+      label: Message
+      placeholder: Your comment message
+    submit: Submit Comment
 
 
 # Build settings
