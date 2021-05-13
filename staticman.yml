@@ -1,7 +1,7 @@
 comments:
   name: steve-for-jekyll
-  branch: feat-staticman-support
-  comment: "adds staticman data"
+  branch: main
+  commitMessage: "Adds comment via Staticman"
   path: "_data/comments/{options.slug}"
   filename: "comment-{@timestamp}"
   format: yaml
@@ -21,9 +21,6 @@ comments:
     - message
   transforms:
     email: md5
-  allowedOrigins:
-    - "esporo.github.io"
-    - "localhost"
   akismet:
     enabled: true
     author: name
