@@ -1,10 +1,10 @@
 comments:
-  name: steve-for-jekyll
   branch: main
   commitMessage: "Adds comment via Staticman"
   path: "_data/comments/{options.slug}"
   filename: "comment-{@timestamp}"
   format: yaml
+  moderation: true
   allowedFields:
     - name
     - email
