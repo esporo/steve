@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "steve-for-jekyll"
-  spec.version       = "1.0.3"
+  spec.version       = "1.1"
   spec.authors       = ["Arthur Freitas"]
   spec.email         = ["email@arthr.me"]
 
@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/esporo/steve"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|404\.html|LICENSE|README|_config\.yml)!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|404\.html|staticman\.yml|LICENSE|README|_config\.yml)!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "webrick", "~> 1.7"

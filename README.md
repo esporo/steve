@@ -180,6 +180,46 @@ Steve uses the following Jekyll plugins to create sitemaps, RSS feeds, archives 
 
 While Steve sets initial configurations for these plugins, you may want to change them in your `_config.yml`. Please refer to these plugins documentations for further reading about how to change their config options.
 
+### Comments
+
+Steve supports [Staticman](https://staticman.net)-powered comments, and provides initial settings from our own `staticman.yml` config file. You can create your own settings at any time, but keep in mind that Steve looks for the following fields when submitting comments:
+
+- `name`
+- `email`
+- `website`
+- `message`
+
+[Follow these instructions](https://staticman.net/docs/getting-started.html) to set up your Staticman instance.
+
+You can also customize your comments' section and submit form adding the `site.comments` object in your `_config.yml`:
+
+```yaml
+comments:
+  title: Comments
+  form_title: New Comment
+  date_format: "%b %e, %Y @ %l:%M %P"
+  staticman_endpoint: # Get yours on <https://staticman.net>
+  notice: |+ # Accepts Markdown
+    Please be nice in the comments.
+
+    Comments are moderated, so it can take a while for your's to show up.
+
+    Also, you can use [Markdown](https://daringfireball.net/projects/markdown).
+  fields:
+    name:
+      label: Name
+      placeholder: "John Appleseed"
+    email:
+      label: Email address
+      placeholder: "your@email.net"
+    website:
+      label: Website
+      placeholder: "https://john.blog/"
+    message:
+      label: Message
+      placeholder: Your comment message
+    submit: Submit Comment
+```
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/esporo/steve>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
