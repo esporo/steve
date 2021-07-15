@@ -177,6 +177,7 @@ Steve uses the following Jekyll plugins to create sitemaps, RSS feeds, archives 
 - [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) &mdash; generates the XML sitemap.
 - [jekyll-paginate](https://github.com/jekyll/jekyll-paginate) &mdash; paginates the home post list.
 - [jekyll-archives](https://github.com/jekyll/jekyll-archives) &mdash; generates the archives by date, tag and category.
+- [jekyll-loading-lazy](https://github.com/gildesmarais/jekyll-loading-lazy) &mdash; adds `loading="lazy"` to all images and frames on your pages and posts.
 
 While Steve sets initial configurations for these plugins, you may want to change them in your `_config.yml`. Please refer to these plugins documentations for further reading about how to change their config options.
 
@@ -220,6 +221,7 @@ comments:
       placeholder: Your comment message
     submit: Submit Comment
 ```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/esporo/steve>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
