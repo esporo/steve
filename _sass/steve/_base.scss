@@ -3,9 +3,21 @@
 */
 
 body,
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
@@ -42,9 +54,15 @@ body {
 */
 
 .content-body {
-  p, pre, blockquote,
-  dl, ul, ol,
-  figure, iframe, table,
+  p,
+  pre,
+  blockquote,
+  dl,
+  ul,
+  ol,
+  figure,
+  iframe,
+  table,
   .highlight {
     margin-bottom: var(--gap);
   }
@@ -64,8 +82,14 @@ a {
 }
 
 // Lists
-ul, ol {
+ul,
+ol {
   margin-left: var(--gap);
+
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
 }
 
 dl {
@@ -79,7 +103,12 @@ dl {
 }
 
 // Headings
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.2;
   font-family: var(--font-headings);
 }
@@ -115,8 +144,10 @@ pre {
 }
 
 // Media
-img, iframe,
-video, audio {
+img,
+iframe,
+video,
+audio {
   max-width: 100%;
   border-radius: 3px;
   box-shadow: 0 2px 5px var(--color-details);
@@ -130,7 +161,8 @@ table {
   color: var(--color-details-darker);
   width: 100%;
 
-  th, td {
+  th,
+  td {
     border-bottom: 1px solid var(--color-details-lighter);
     padding: calc(var(--gap) / 4);
     text-align: left;
