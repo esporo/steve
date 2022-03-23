@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "steve-for-jekyll"
-  spec.version       = "1.1.2"
+  spec.version       = "1.1.3"
   spec.authors       = ["Arthur Freitas"]
   spec.email         = ["email@arthr.me"]
 
@@ -14,8 +14,8 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "jekyll", "~> 4.2"
   spec.add_runtime_dependency "webrick", "~> 1.7"
-  spec.add_runtime_dependency "jekyll-feed", "~> 0.15"
-  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.7"
+  spec.add_runtime_dependency "jekyll-feed", "~> 0.16"
+  spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.8"
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-archives", "~> 2.2"
