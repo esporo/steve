@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "steve-for-jekyll"
-  spec.version       = "1.1.3"
+  spec.version       = "1.2.1"
   spec.authors       = ["Arthur Freitas"]
   spec.email         = ["email@arthr.me"]
 
@@ -19,6 +19,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll-sitemap", "~> 1.4"
   spec.add_runtime_dependency "jekyll-paginate", "~> 1.1"
   spec.add_runtime_dependency "jekyll-archives", "~> 2.2"
+  spec.add_runtime_dependency "jekyll-loading-lazy", "~> 0.1"
 
   spec.add_development_dependency "bundler"
 end
