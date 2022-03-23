@@ -2,16 +2,29 @@
   "actions" : {
     "build" : {
       "enabled" : true,
-      "script" : "bundle"
+      "postActions" : [
+        {
+          "sound" : "Basso",
+          "type" : "sound"
+        }
+      ],
+      "script" : "#!\/bin\/sh\nbundler update"
     },
     "clean" : {
       "enabled" : true,
-      "script" : "rm -rf .jekyll-metadata .jekyll-cache _site"
+      "postActions" : [
+        {
+          "sound" : "Submarine",
+          "type" : "sound"
+        }
+      ],
+      "script" : "#!\/bin\/sh\nbundler exec jekyll clean"
     },
     "run" : {
       "enabled" : true,
-      "script" : "bundle exec jekyll serve -l --drafts"
+      "script" : "#!\/bin\/sh\nbundler exec jekyll serve -l --drafts"
     }
   },
-  "identifier" : "B35EB74A-0646-491A-BE1A-F93468827E6D"
+  "buildBeforeRunning" : true,
+  "openLogOnRun" : "start"
 }
