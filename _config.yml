@@ -81,7 +81,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-archives
-  - jekyll-loading-lazy
 
 # Plugin: jekyll-archives
 jekyll-archives:
