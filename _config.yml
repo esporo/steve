@@ -8,7 +8,7 @@ email: steve-support@esporo.net
 lang: en
 
 url: ""
-baseurl: "/steve/"
+baseurl: "/steve"
 
 # Theme settings
 steve:
