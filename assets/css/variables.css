@@ -1,0 +1,14 @@
+/*
+    You should replace this file with your own values to these variables.
+    Copy and paste it in your repo and fine-tune your colors, fonts and sizing.
+*/
+
+:root {
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}
