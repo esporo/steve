@@ -1,1 +1,25 @@
-{{ content }}
+<!doctype html>
+<html lang="{{- page.lang | default: site.lang -}}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% if page.title -%}
+      <title>{{ page.title }} ({{- site.title -}})</title>
+    {%- else -%}
+      <title>{{ site.title }} &mdash; {{ site.tagline }}</title>
+    {%- endif %}
+    <meta name="description" content="{{- page.excerpt | default: site.description -}}" />
+
+    <link rel="stylesheet" href="{%- link assets/css/reset.css -%}" />
+    <link rel="stylesheet" href="{%- link assets/css/style.css -%}" />
+    <link rel="stylesheet" href="{%- link assets/css/variables.css -%}" />
+
+    {% seo title=false %}
+    {% feed_meta %}
+    {% json_feed_meta %}
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
