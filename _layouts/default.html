@@ -1,18 +1,1 @@
-<!doctype html>
-<html lang="{{ page.lang | default: site.lang }}">
-  {% include head.html %}
-
-  <body class="{{ page.layout | prepend: 'layout-' }}">
-    {% include header.html %}
-
-    <main class="container">
-      {{ content }}
-    </main>
-
-    {% include footer.html %}
-
-    {% if content contains "iframe" %}
-      <script src="{% link assets/js/responsive-videos.js %}"></script>
-    {% endif %}
-  </body>
-</html>
+{{ content }}
