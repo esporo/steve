@@ -1,0 +1,42 @@
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--base-font-family);
+  font-size: var(--main-font-size);
+  line-height: 1.5;
+}
+
+a, a:visited {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0;
+  transition: all 250ms ease;
+}
+
+a:hover, a:focus {
+  color: var(--color-accent-alt);
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.05em;
+}
+
+.site {
+  max-width: 110rem;
+  margin: var(--spacing-unit) auto;
+  padding-left: calc(var(--spacing-unit) / 2);
+  padding-right: calc(var(--spacing-unit) / 2);
+}
+
+.site-header {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: calc(var(--spacing-unit) / 2);
+}
+
+.site-header .site-title {
+  font-size: calc(var(--main-font-size) * 2);
+  font-weight: bold;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -20,6 +20,27 @@
     {% json_feed_meta %}
   </head>
   <body>
-    {{ content }}
+    <div class="site">
+
+      {%- capture site_branding -%}
+        {% if site.logo -%}
+          <img class="site-logo" src="{{- site.logo -}}" alt="{{- site.title -}}" role="presentation" />
+          <span class="screen-reader-text">{{- site.title -}}</span>
+        {%- else -%}
+          {{- site.title -}}
+        {%- endif %}
+      {%- endcapture -%}
+
+      <header class="site-header">
+        {% if page.title -%}
+          <span class="site-title">
+            <a href="{{- site.url -}}">
+              {{ site_branding }}
+            </a>
+          </span>
+        {%- endif %}
+      </header>
+      {{ content }}
+    </div>
   </body>
 </html>

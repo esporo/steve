@@ -4,11 +4,27 @@
 */
 
 :root {
+  --base-font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --head-font-family: var(--base-font-family);
+  --mono-font-family: Monaco, Consolas, "DejaVu Sans Mono", "Courier New", monospace;
 
+  --main-font-size: clamp(1.6rem, 2vw, 1.9rem);
+  --small-font-size: clamp(1.4rem, 1.7vw + 0.5rem, 1.5rem);
+  --spacing-unit: 2.5rem;
+
+  --color-foreground: rgb(1, 1, 5);
+  --color-background: rgb(234, 238, 241);
+  --color-details: rgb(149, 149, 153);
+  --color-accent: rgb(45, 158, 221);
+  --color-accent-alt: rgb(224, 147, 47);
 }
 
 @media screen and (prefers-color-scheme: dark) {
   :root {
-
+    --color-foreground: rgb(255, 255, 255);
+    --color-background: rgb(1, 1, 5);
+    --color-details: rgb(149, 149, 153);
+    --color-accent: rgb(35, 97, 167);
+    --color-accent-alt: rgb(164, 36, 51);
   }
 }

@@ -1,0 +1,31 @@
+/*
+  You can replace this file in your site with your own custom fonts.
+*/
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/atkinson-hyperlegible-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/atkinson-hyperlegible-400i.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/atkinson-hyperlegible-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/atkinson-hyperlegible-700i.woff2") format("woff2");
+}
